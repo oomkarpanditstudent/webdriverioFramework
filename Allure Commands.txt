@@ -1,0 +1,2 @@
+ bash C:/Users/oomka_tuvt7vj/AppData/Roaming/npm/allure generate C:/GIT/webdriverioFramework/reports/allure-results --clean
+ bash C:/Users/oomka_tuvt7vj/AppData/Roaming/npm/allure open
