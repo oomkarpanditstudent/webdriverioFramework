@@ -35,7 +35,7 @@ class ContactUs_Page {
 
 	submitAllInformationViaContactUsForm(firstName, lastName, emailAddress, comments) {
 		if(firstName) {
-			this.firstName.setValue(firstName);
+		this.setFirstName(firstName);	
 		}
 		if(lastName) {
 			this.lastName.setValue(lastName);
