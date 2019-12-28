@@ -18,7 +18,7 @@ exports.config = {
     // on a remote machine).
     runner: 'local',
 	hostname: 'localhost',
-    port: 4444,
+    port: 5555,
     path: '/wd/hub',
     
     //
@@ -65,14 +65,17 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome'/*,
+        browserName: 'firefox'/*,
         'goog:chromeOptions': {
         // to run chrome headless the following flags are required
         // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
          args: ['--headless','--no-sandbox']//, '--disable-gpu'],
         }*/
     
-    }],
+    },
+
+    {browserName:'firefox'}
+],
     //
     // ===================
     // Test Configurations
