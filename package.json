@@ -4,7 +4,10 @@
   "description": "Webdriverio Framework",
   "main": "index.js",
   "scripts": {
-    "test": "wdio"
+    "test": "wdio",
+    "chrome": "./node_modules/.bin/wdio wdio.conf.js",
+    "firefox": "./node_modules/.bin/wdio wdio.conf_firefox.js"
+
   },
   "author": "Gianni Bruno",
   "license": "ISC",
