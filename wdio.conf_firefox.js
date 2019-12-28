@@ -72,10 +72,7 @@ exports.config = {
          args: ['--headless','--no-sandbox']//, '--disable-gpu'],
         }*/
     
-    },
-
-    {browserName:'firefox'}
-],
+    }],
     //
     // ===================
     // Test Configurations
