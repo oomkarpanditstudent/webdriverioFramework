@@ -6,9 +6,11 @@
   "scripts": {
     "test": "wdio",
     "chrome": "./node_modules/.bin/wdio wdio.conf.js",
-    "firefox": "./node_modules/.bin/wdio wdio.conf_firefox.js"
-
-  },
+    "firefox": "./node_modules/.bin/wdio wdio.conf_firefox.js",
+    "docker_chrome": "./node_modules/.bin/wdio wdio_docker_ch.conf.js",
+    "docker_firefox": "./node_modules/.bin/wdio wdio_docker_ff.conf.js",
+    "docker_grid": "./node_modules/.bin/wdio wdio._docker_grid.conf.js"
+    },
   "author": "Gianni Bruno",
   "license": "ISC",
   "devDependencies": {
@@ -24,6 +26,7 @@
     "mocha": "^6.0.1",
     "selenium-standalone": "^6.15.3",
     "sync-request": "^6.0.0",
+    "wdio-docker-service": "^2.1.5-rc.0",
     "webdriverio": "^5.6.2"
   },
   "dependencies": {}

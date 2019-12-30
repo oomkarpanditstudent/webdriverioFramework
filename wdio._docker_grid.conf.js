@@ -68,7 +68,7 @@ exports.config = {
         browserName: 'chrome'
     },{
         browserName: 'firefox'
-    }
+    },
         
         /*,
         'goog:chromeOptions': {
@@ -116,7 +116,6 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone'],
    
-
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
