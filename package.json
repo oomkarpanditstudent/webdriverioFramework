@@ -9,7 +9,7 @@
     "firefox": "./node_modules/.bin/wdio wdio.conf_firefox.js",
     "docker_chrome": "./node_modules/.bin/wdio wdio_docker_ch.conf.js",
     "docker_firefox": "./node_modules/.bin/wdio wdio_docker_ff.conf.js",
-    "docker_grid": "./node_modules/.bin/wdio wdio._docker_grid.conf.js"
+    "docker_grid": "./node_modules/.bin/wdio wdio._docker_grid.conf.js --hostname 'selenium-hub'"
     },
   "author": "Gianni Bruno",
   "license": "ISC",
