@@ -1,6 +1,5 @@
 # To execute this docker-compose yml file use `docker-compose -f <file_name> up`
 # Add the `-d` flag at the end for detached execution
-# option 2
 version: "3"
 services:
   selenium-hub:
@@ -36,9 +35,9 @@ services:
     ports:
       - "5800:5900"
   wdio-framework:
-    image: oomkar/ubuntu_node
+    image: oomkar/wdio_slim
     container_name: wdiofw_docrz
-    command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git && cd webdriverioFramework && npm install && npm run docker_grid"
+    command: bash -c "npm run docker_grid"
     depends_on:
       - selenium-hub
       - firefox-dbug

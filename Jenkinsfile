@@ -4,17 +4,19 @@ pipeline {
         stage('Build Node') {
             agent {
                 docker {
-                    image 'node'
+                    image 'oomkar/node-slim'
                 }
             }
             steps {
-                sh 'npm install'
+                bat 'git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git'
+                bat 'cd webdriverioframework'
+                bat 'npm install'
             }
         }
         stage('Build Image') {
             steps {
                 script {
-                	app = docker.build("oomkar/node-selenium-docker")
+                	app = docker.build("oomkar/node-wdio-docker")
                 }
             }
         }

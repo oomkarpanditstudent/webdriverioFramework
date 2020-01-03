@@ -1,3 +1,5 @@
+# To execute this docker-compose yml file use `docker-compose -f <file_name> up`
+# Add the `-d` flag at the end for detached execution
 version: "3"
 services:
   selenium-hub:
@@ -33,7 +35,7 @@ services:
     ports:
       - "5800:5900"
   wdio-framework:
-    image: oomkar/wdio_framework
+    image: oomkar/ubuntu_node_modules_nogit
     container_name: wdiofw_docrz
     command: bash -c "npm run docker_grid"
     depends_on:
