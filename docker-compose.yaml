@@ -34,3 +34,12 @@ services:
       - HUB_PORT=4444
     ports:
       - "5800:5900"
+  wdio-framework:
+    image: oomkar/wdioframework
+    container_name: wdio_automation_framework_dockerized
+    depends_on:
+      - selenium-hub
+      - firefox-dbug
+      - chrome-dbug
+   
+  
