@@ -37,7 +37,7 @@ services:
   wdio-framework:
     image: oomkar/ubuntu_node_modules 
     container_name: wdiofw_docrz
-    command: bash -c "npm install && npm run docker_grid"
+    command: bash -c "npm run docker_grid"
     depends_on:
       - selenium-hub
       - firefox-dbug
