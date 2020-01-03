@@ -36,7 +36,7 @@ services:
       - "5800:5900"
   wdio-framework:
     image: oomkar/ubuntu_node
-    container_name: wdiofw_docrzd
+    container_name: wdiofw_docrz
     command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git && cd webdriverioFramework && npm install && npm run docker_grid"
     depends_on:
       - selenium-hub
