@@ -35,7 +35,7 @@ services:
     ports:
       - "5800:5900"
   wdio-framework:
-    image: oomkar/ubuntu_node_modules 
+    image: oomkar/ubuntu_node_modules_nogit
     container_name: wdiofw_docrz
     command: bash -c "npm run docker_grid"
     depends_on:
