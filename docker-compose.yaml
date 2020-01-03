@@ -37,7 +37,7 @@ services:
   wdio-framework:
     image: oomkar/ubuntu_node
     container_name: wdiofw_docrzd
-    command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git && cd webdriverioFramework && npm install && npm run docker_grid "
+    command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git && cd webdriverioFramework && npm install && npm run docker_grid"
     depends_on:
       - selenium-hub
       - firefox-dbug
