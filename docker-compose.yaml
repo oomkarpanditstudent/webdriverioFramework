@@ -36,7 +36,8 @@ services:
       - "5800:5900"
   wdio-framework:
     image: oomkar/wdioframework
-    container_name: wdio_automation_framework_dockerized
+    container_name: wdiofw_docrzd
+    command: 'npm run docker_grid'
     depends_on:
       - selenium-hub
       - firefox-dbug
