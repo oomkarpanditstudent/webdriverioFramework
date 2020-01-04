@@ -8,9 +8,9 @@ pipeline {
                 }
             }
             steps {
-                bat 'git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git'
-                bat 'cd webdriverioframework'
-                bat 'npm install'
+                sh 'git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git'
+                sh 'cd webdriverioframework'
+                sh 'npm install'
             }
         }
         stage('Build Image') {
