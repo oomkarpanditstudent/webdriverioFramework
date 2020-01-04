@@ -1,34 +1,16 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build Node') {
+pipeline { 
             agent {
                 docker {
                     image 'oomkar/node-slim'
+                    args '-v $HOME/temppipe:/root/temppipe'
                 }
             }
-            steps {
-                sh 'git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git'
-                sh 'cd webdriverioframework'
-                sh 'npm install'
+          
+            stages {
+                stage('Get code and dependencies'){
+                   steps {
+                        sh 'npm install'
             }
         }
-        stage('Build Image') {
-            steps {
-                script {
-                	app = docker.build("oomkar/node-wdio-docker")
-                }
-            }
-        }
-        stage('Push Image') {
-            steps {
-                script {
-			        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-			        	app.push("${BUILD_NUMBER}")
-			            app.push("latest")
-			        }
-                }
-            }
-        }
-    }
+    }  
 }
