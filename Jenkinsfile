@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                bat 'docker-compose up -d selenium-hub chrome-debug firefox-debug' 
+                bat 'docker-compose up -d selenium-hub chrome-dbug firefox-dbug' 
             }
         }
         stage('Test'){
