@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test - Run Automated Tests'){
             steps {
-               bat 'docker-compose up -d wdio-framework' 
+               bat 'docker-compose up wdio-framework' 
             }
         }
         stage('Shutdown - Grid down') {
