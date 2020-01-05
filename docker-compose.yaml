@@ -33,9 +33,13 @@ services:
     ports:
       - "5800:5900"
   wdio-framework:
-    image: oomkar/ubuntu_node_git 
+    image: oomkar/ubuntu_node 
     container_name: wdiofw_docrz
     command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git && cd webdriverioframework && npm install && npm run docker_grid"
+    depends_on:
+      - selenium-hub
+      - firefox-dbug
+
     depends_on:
       - selenium-hub
       - firefox-dbug
