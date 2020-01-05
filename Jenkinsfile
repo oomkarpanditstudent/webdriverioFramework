@@ -17,5 +17,11 @@ pipeline {
                 bat 'docker-compose down' 
             }
         }
+         stage('Clean up - docker') {
+            steps {
+                bat 'docker container prune -f'
+                bat 'docker network prune -f' 
+            }
+        }
     }
 }
