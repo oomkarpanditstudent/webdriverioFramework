@@ -36,6 +36,7 @@ services:
     image: oomkar/ubuntu_node_git 
     container_name: wdiofw_docrz
     command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git" 
+    command: bash -c "cd webdriverioFramework" 
     command: bash -c "npm install"
     command: bash -c "npm run docker_grid"
     depends_on:
