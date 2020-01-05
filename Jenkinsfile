@@ -1,16 +1,21 @@
 pipeline { 
-            agent {
-                docker {
-                    image 'oomkar/node-slim'
-                    args '-v $HOME/temppipe:/root/temppipe'
-                }
-            }
-          
-            stages {
-                stage('Get code and dependencies'){
-                   steps {
-                        sh 'npm install'
+    agent any 
+   
+    stages {
+        stage('Build') { 
+            steps { 
+                bat 'docker-compose up -d selenium-hub chrome-debug firefox-debug' 
             }
         }
-    }  
+        stage('Test'){
+            steps {
+               bat 'docker-compose up -d wdio-framework' 
+            }
+        }
+        stage('Shutdown') {
+            steps {
+                bat 'docker-compose down' 
+            }
+        }
+    }
 }
