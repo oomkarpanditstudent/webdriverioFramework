@@ -2,6 +2,12 @@ pipeline {
     agent any 
    
     stages {
+       stage('PRE BUILD - Clean up - docker') {
+            steps {
+                bat 'docker container prune -f'
+                bat 'docker network prune -f' 
+            }
+        }
         stage('Build - Set up GRID') { 
             steps { 
                 bat 'docker-compose up -d selenium-hub chrome-dbug firefox-dbug' 
@@ -17,11 +23,6 @@ pipeline {
                 bat 'docker-compose down' 
             }
         }
-         stage('Clean up - docker') {
-            steps {
-                bat 'docker container prune -f'
-                bat 'docker network prune -f' 
-            }
-        }
+         
     }
 }
