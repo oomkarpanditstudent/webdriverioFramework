@@ -8,6 +8,11 @@ pipeline {
                 bat 'docker network prune -f' 
             }
         }
+        stage('Docker base image- checking for latest') {
+            steps {
+                bat 'docker pull oomkar/ubuntu_node_git' 
+            }
+        }
         stage('Build - Set up GRID') { 
             steps { 
                 bat 'docker-compose up -d selenium-hub chrome-dbug firefox-dbug' 
