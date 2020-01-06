@@ -13,7 +13,7 @@ pipeline {
 			        bat "docker push oomkar/ubuntu_node_git:latest"
 			    }                           
             }
-        }
+        
        stage('PREP for Exec - Clean up - docker') {
             steps {
                 bat 'docker container prune -f'
