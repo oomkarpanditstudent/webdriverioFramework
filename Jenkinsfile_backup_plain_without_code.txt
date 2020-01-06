@@ -5,12 +5,12 @@ pipeline {
          
         stage('Build Image') {
             steps {
-                bat 'docker build -t oomkar/wdio . '
+                bat 'docker build -t oomkar/ubuntu_node_git . '
             }
         }
         stage('Push Image') {
             steps {
-			        bat 'docker push oomkar/wdio:latest'
+			        bat 'docker push oomkar/ubuntu_node_git:latest'
 			    }                           
             }
         
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Docker base image- checking for latest') {
             steps {
-                bat 'docker pull oomkar/wdio' 
+                bat 'docker pull oomkar/ubuntu_node_git' 
             }
         }
         stage('Build - Set up GRID') { 
