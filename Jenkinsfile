@@ -5,12 +5,12 @@ pipeline {
          
         stage('Build Image') {
             steps {
-                bat "docker build -t 'oomkar/ubuntu_node_git' ."
+                bat 'docker build -t oomkar/ubuntu_node_git . '
             }
         }
         stage('Push Image') {
             steps {
-			        bat "docker push 'oomkar/ubuntu_node_git:latest'"
+			        bat 'docker push oomkar/ubuntu_node_git:latest'
 			    }                           
             }
         
