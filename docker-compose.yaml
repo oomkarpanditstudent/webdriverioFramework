@@ -37,7 +37,7 @@ services:
     container_name: wdiofw_docrz
     volumes:
       - c:/git/wdiofw_dockerrunner_backup:/usr/src
-    command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git && cd webdriverioFramework && npm install && npm run docker_grid"
+    command: bash -c "git clone https://github.com/oomkarpanditstudent/webdriverioFramework.git . && cd webdriverioFramework && npm install && npm run docker_grid"
     depends_on:
       - selenium-hub
       - firefox-dbug

@@ -4,7 +4,7 @@ pipeline {
     stages {
        stage('PRE BUILD - Clean up - docker') {
             steps {
-                bat 'docker container prune -f'
+                bat 'docker stop  prune -f'
                 bat 'docker network prune -f' 
             }
         }
