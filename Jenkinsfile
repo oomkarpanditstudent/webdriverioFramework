@@ -2,7 +2,19 @@ pipeline {
     agent any 
    
     stages {
-       stage('PRE BUILD - Clean up - docker') {
+         
+        stage('Build Image') {
+            steps {
+                bat "docker build -t='oomkar/ubuntu_node_git' ."
+            }
+        }
+        stage('Push Image') {
+            steps {
+			        bat "docker push oomkar/ubuntu_node_git:latest"
+			    }                           
+            }
+        }
+       stage('PREP for Exec - Clean up - docker') {
             steps {
                 bat 'docker container prune -f'
                 bat 'docker network prune -f' 
