@@ -14,12 +14,6 @@ pipeline {
 			    }                           
             }
         
-       stage('PREP for Exec - Clean up - docker') {
-            steps {
-                bat 'docker container prune -f'
-                bat 'docker network prune -f' 
-            }
-        }
         stage('Docker base image- checking for latest') {
             steps {
                 bat 'docker pull oomkar/wdio' 
